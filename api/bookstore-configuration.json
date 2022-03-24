@@ -1,0 +1,33 @@
+{
+	"Product": "AwesomeBookStore",
+	"ProductVersion": "1.0.0",
+
+	"UUID":
+		{
+			"DataCenter": 0,
+			"Worker": 0
+		},
+	"LogStreams":
+		[
+			{
+				"level": "trace",
+				"path": "./BookStore-Run.log"
+			},
+			{
+				"level": "trace",
+				"streamtype": "prettystream"
+			}
+		],
+
+	"APIServerPort": 8080,
+
+	"MySQL":
+		{
+			"Server": "127.0.0.1",
+			"Port": 3306,
+			"User": "root",
+			"Password": "123456789",
+			"Database": "bookstore",
+			"ConnectionPoolLimit": 20
+		}
+}

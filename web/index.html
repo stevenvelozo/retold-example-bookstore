@@ -1,0 +1,30 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>The Book Store</title>
+  <link rel="stylesheet" href="styles.css?v=1.0">
+  <script src="jquery.js"></script>
+</head>
+
+<body>
+<h1>The Awesomest Bookstore Ever</h1>
+<div id="BookContainer">
+</div>
+<script>
+$(document).ready(function() {
+    $.ajax({
+        url: "1.0/Books/0/1000"
+    }).then(function(pData) {
+    	for (var i = 0; i < pData.length; i++)
+    	{
+    		$('#BookContainer').append('<div class="book"><img src="'+pData[i].ImageURL+'"><h3>'+pData[i].Title+'</h3></div>');
+
+    	}
+    });
+});
+</script>
+</body>
+</html>

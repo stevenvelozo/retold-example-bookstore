@@ -1,0 +1,22 @@
+{
+  "name": "awesomebookstore",
+  "version": "1.0.0",
+  "description": "Book store example.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "allen and steven",
+  "license": "MIT",
+  "dependencies": {
+    "async": "^3.2.0",
+    "fable": "~1.0.2",
+    "meadow": "^1.0.29",
+    "meadow-endpoints": "^2.0.7",
+    "mysql2": "^2.1.0",
+    "orator": "^2.0.4",
+    "papaparse": "^5.2.0",
+    "stricture": "^1.0.29"
+  }
+}
