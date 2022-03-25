@@ -60,7 +60,7 @@ npm run docker-dev-build-image
 
 2. Run this command to build the local container:
 ```
-docker run -it --name retold-example_bookstore-dev -p 127.0.0.1:12346:8080 -p 13306:3306 -v "$PWD/.config:/home/coder/.config"  -v "$PWD:/home/coder/retold-example_bookstore" -u "$(id -u):$(id -g)" -e "DOCKER_USER=$USER" retold/retold-example_bookstore:local
+docker run -it --name retold-example_bookstore-dev -p 127.0.0.1:12346:8080 -p 12306:3306 -v "$PWD/.config:/home/coder/.config"  -v "$PWD:/home/coder/retold-example_bookstore" -u "$(id -u):$(id -g)" -e "DOCKER_USER=$USER" retold/retold-example_bookstore:local
 ```
 
 alternatively you can use npm to run this
