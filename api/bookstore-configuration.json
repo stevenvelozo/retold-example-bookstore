@@ -19,7 +19,7 @@
 			}
 		],
 
-	"APIServerPort": 8080,
+	"APIServerPort": 8086,
 
 	"MySQL":
 		{
