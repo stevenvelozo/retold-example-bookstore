@@ -7,7 +7,7 @@
     "start": "node api/index.js",
     "test": "echo \"No root level tests.\" && exit 1",
     "docker-dev-build-image": "docker build ./ -t retold/retold-example_bookstore:local",
-    "docker-dev-run": "docker run -it -d --name retold-example_bookstore-dev -p 127.0.0.1:12340:8080 -p 12306:3306 -v \"$PWD/.config:/home/coder/.config\"  -v \"$PWD:/home/coder/retold-example_bookstore\" -u \"$(id -u):$(id -g)\" -e \"DOCKER_USER=$USER\" retold/retold-example_bookstore:local"
+    "docker-dev-run": "docker run -it -d --name retold-example_bookstore-dev -p 127.0.0.1:12340:8080 -p 12306:3306 -p 8086:8086 -v \"$PWD/.config:/home/coder/.config\"  -v \"$PWD:/home/coder/retold-example_bookstore\" -u \"$(id -u):$(id -g)\" -e \"DOCKER_USER=$USER\" retold/retold-example_bookstore:local"
   },
   "author": "steven velozo",
   "license": "MIT",
