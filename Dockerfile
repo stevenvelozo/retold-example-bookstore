@@ -19,7 +19,9 @@ ADD ./.config/MySQL-Laden-Entry.sh /usr/bin/MySQL-Laden-Entry.sh
 RUN ( sudo mysqld_safe --skip-grant-tables --skip-networking & ) && sleep 5 &&  mysql -u root < /home/coder/MySQL-Configure-Security.sql
 
 # Import the initial database
+COPY ./api/model/sql_create/BookStore-CreateDatabase.mysql.sql /home/coder/MySQL-Create-Databases.sql
 RUN sudo service mariadb restart && sleep 5 && mysql -u root -p"123456789" -e "CREATE DATABASE bookstore;"
+RUN sudo service mariadb restart && sleep 5 && mysql -u root -p"123456789" bookstore < /home/coder/MySQL-Create-Databases.sql
 
 SHELL ["/bin/bash", "-c"]
 USER coder
