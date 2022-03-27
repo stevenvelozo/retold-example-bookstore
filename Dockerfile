@@ -30,10 +30,13 @@ USER coder
 # This broke the debug runners
 # COPY ./.config/.default_home/ /home/coder/
 
-RUN echo "...mapping library specific volumes..."
-# Volume mappings for RETOLD:Bookstore example
-VOLUME /home/coder/retold-example_bookstore
-# VOLUME /home/coder/retold-example_bookstore/node_modules
+RUN echo "...mapping development environment volumes..."
+# Volume mappings for RETOLD:Bookstore example and subsequent libraries
+
+RUN mkdir -p /home/coder/retold-dev
+VOLUME /home/coder/retold-dev/retold-example_bookstore
+# The library folder is for whatever module you want to work on
+VOLUME /home/coder/retold-dev/library
 
 RUN echo "...installing node version manager..."
 # Because there is a .bashrc chicken/egg problem, we will create one here to simulate logging in.  This is not great.
@@ -44,6 +47,11 @@ RUN echo "...installing node version 14 as the default..."
 RUN . ~/.nvm/nvm.sh && source ~/.bashrc && nvm install 14
 RUN . ~/.nvm/nvm.sh && source ~/.bashrc && nvm alias default 14
 
-WORKDIR /home/coder/retold-example_bookstore
+RUN echo "...copying back the vscode file because of the metaenvironment..."
+COPY ./.vscode /home/coder/retold-dev/.vscode
+
+WORKDIR /home/coder/retold-dev
+
+RUN echo "...build complete!"
 
 ENTRYPOINT ["/usr/bin/MySQL-Laden-Entry.sh"]

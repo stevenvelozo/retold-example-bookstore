@@ -5,14 +5,14 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Launch Server",
+            "name": "Launch Bookstore API Server",
             "type": "pwa-node",
             "request": "launch",
             "outputCapture": "std",
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}/api/index.js",
+            "program": "${workspaceFolder}/retold-example_bookstore/api/index.js",
             "presentation": {
                 "hidden": false,
                 "group": "",
@@ -20,22 +20,7 @@
             }
         },
         {
-            "name": "Import Books",
-            "type": "pwa-node",
-            "request": "launch",
-            "outputCapture": "std",
-            "skipFiles": [
-                "<node_internals>/**"
-            ],
-            "program": "${workspaceFolder}/api/import-books.js",
-            "presentation": {
-                "hidden": false,
-                "group": "",
-                "order": 3
-            }
-        },
-        {
-            "name": "Mocha Tests",
+            "name": "Bookstore Mocha Tests",
             "args": [
                 "-u",
                 "tdd",
@@ -45,7 +30,7 @@
                 "${workspaceFolder}/test"
             ],
             "internalConsoleOptions": "openOnSessionStart",
-            "program": "${workspaceFolder}/node_modules/mocha/bin/_mocha",
+            "program": "${workspaceFolder}/retold-example_bookstore/node_modules/mocha/bin/_mocha",
             "request": "launch",
             "skipFiles": [
                 "<node_internals>/**"
@@ -56,6 +41,59 @@
                 "group": "",
                 "order": 2
             }
+        },
+        {
+            "name": "Import Books",
+            "type": "pwa-node",
+            "request": "launch",
+            "outputCapture": "std",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/retold-example_bookstore/api/import-books.js",
+            "presentation": {
+                "hidden": false,
+                "group": "",
+                "order": 3
+            }
+        },
+        {
+            "name": "Retold Dev Harness",
+            "type": "pwa-node",
+            "request": "launch",
+            "outputCapture": "std",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/library/Debug/Harness.js",
+            "presentation": {
+                "hidden": false,
+                "group": "",
+                "order": 4
+            }
         }
+        {
+            "name": "Library Mocha Tests",
+            "args": [
+                "-u",
+                "tdd",
+                "--timeout",
+                "999999",
+                "--colors",
+                "${workspaceFolder}/test"
+            ],
+            "internalConsoleOptions": "openOnSessionStart",
+            "program": "${workspaceFolder}/library/node_modules/mocha/bin/_mocha",
+            "request": "launch",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "type": "pwa-node",
+            "presentation": {
+                "hidden": false,
+                "group": "",
+                "order": 5
+            }
+        },
     ]
 }
