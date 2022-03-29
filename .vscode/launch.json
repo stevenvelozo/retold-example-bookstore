@@ -12,7 +12,7 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}/retold-example_bookstore/api/index.js",
+            "program": "${workspaceFolder}/retold-example/api/index.js",
             "presentation": {
                 "hidden": false,
                 "group": "",
@@ -30,7 +30,7 @@
                 "${workspaceFolder}/test"
             ],
             "internalConsoleOptions": "openOnSessionStart",
-            "program": "${workspaceFolder}/retold-example_bookstore/node_modules/mocha/bin/_mocha",
+            "program": "${workspaceFolder}/retold-example/node_modules/mocha/bin/_mocha",
             "request": "launch",
             "skipFiles": [
                 "<node_internals>/**"
@@ -50,7 +50,7 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}/retold-example_bookstore/api/import-books.js",
+            "program": "${workspaceFolder}/retold-example/api/import-books.js",
             "presentation": {
                 "hidden": false,
                 "group": "",
