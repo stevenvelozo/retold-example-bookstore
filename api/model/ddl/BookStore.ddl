@@ -1,6 +1,6 @@
 !Book
 @IDBook
-%GUIDAuthor
+%GUIDBook
 &CreateDate
 #CreatingIDUser
 &UpdateDate
@@ -18,6 +18,7 @@ $ImageURL 254
 
 !BookAuthorJoin
 @IDBookAuthorJoin
+%GUIDBookAuthorJoin
 #IDBook -> IDBook
 #IDAuthor -> IDAuthor
 

@@ -1,9 +1,9 @@
--- Data Model -- Generated 2022-03-24T19:54:48.133Z
+-- Data Model -- Generated 2022-03-29T07:39:03.691Z
 
 -- This script creates the following tables:
 -- Table ----------------------------------------- Column Count ----------------
 --   Book                                                   16
---   BookAuthorJoin                                          3
+--   BookAuthorJoin                                          4
 --   Author                                                 10
 --   BookPrice                                              15
 --   Review                                                 12
@@ -15,7 +15,7 @@ CREATE TABLE IF NOT EXISTS
     Book
     (
         IDBook INT UNSIGNED NOT NULL AUTO_INCREMENT,
-        GUIDAuthor CHAR(36) NOT NULL DEFAULT '00000000-0000-0000-0000-000000000000',
+        GUIDBook CHAR(36) NOT NULL DEFAULT '00000000-0000-0000-0000-000000000000',
         CreateDate DATETIME,
         CreatingIDUser INT NOT NULL DEFAULT '0',
         UpdateDate DATETIME,
@@ -41,6 +41,7 @@ CREATE TABLE IF NOT EXISTS
     BookAuthorJoin
     (
         IDBookAuthorJoin INT UNSIGNED NOT NULL AUTO_INCREMENT,
+        GUIDBookAuthorJoin CHAR(36) NOT NULL DEFAULT '00000000-0000-0000-0000-000000000000',
         IDBook INT NOT NULL DEFAULT '0',
         IDAuthor INT NOT NULL DEFAULT '0',
 

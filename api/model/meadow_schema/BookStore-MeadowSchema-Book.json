@@ -8,7 +8,7 @@
             "Type": "AutoIdentity"
         },
         {
-            "Column": "GUIDAuthor",
+            "Column": "GUIDBook",
             "Type": "AutoGUID"
         },
         {
@@ -70,7 +70,7 @@
     ],
     "DefaultObject": {
         "IDBook": 0,
-        "GUIDAuthor": "0x0000000000000000",
+        "GUIDBook": "0x0000000000000000",
         "CreateDate": null,
         "CreatingIDUser": 0,
         "UpdateDate": null,
@@ -93,7 +93,7 @@
             "IDBook": {
                 "type": "integer"
             },
-            "GUIDAuthor": {
+            "GUIDBook": {
                 "type": "string"
             },
             "CreateDate": {

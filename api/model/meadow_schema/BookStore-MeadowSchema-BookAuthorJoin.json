@@ -8,6 +8,10 @@
             "Type": "AutoIdentity"
         },
         {
+            "Column": "GUIDBookAuthorJoin",
+            "Type": "AutoGUID"
+        },
+        {
             "Column": "IDBook",
             "Type": "Integer"
         },
@@ -18,6 +22,7 @@
     ],
     "DefaultObject": {
         "IDBookAuthorJoin": 0,
+        "GUIDBookAuthorJoin": "0x0000000000000000",
         "IDBook": 0,
         "IDAuthor": 0
     },
@@ -27,6 +32,9 @@
         "properties": {
             "IDBookAuthorJoin": {
                 "type": "integer"
+            },
+            "GUIDBookAuthorJoin": {
+                "type": "string"
             },
             "IDBook": {
                 "type": "integer"

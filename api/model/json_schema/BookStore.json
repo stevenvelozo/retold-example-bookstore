@@ -9,7 +9,7 @@
                     "DataType": "ID"
                 },
                 {
-                    "Column": "GUIDAuthor",
+                    "Column": "GUIDBook",
                     "DataType": "GUID"
                 },
                 {
@@ -84,6 +84,10 @@
                 {
                     "Column": "IDBookAuthorJoin",
                     "DataType": "ID"
+                },
+                {
+                    "Column": "GUIDBookAuthorJoin",
+                    "DataType": "GUID"
                 },
                 {
                     "Column": "IDBook",
