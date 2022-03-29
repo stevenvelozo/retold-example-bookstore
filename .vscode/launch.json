@@ -65,7 +65,7 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}/library/Debug/Harness.js",
+            "program": "${workspaceFolder}/library/debug/Harness.js",
             "presentation": {
                 "hidden": false,
                 "group": "",
