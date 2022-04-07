@@ -178,7 +178,7 @@ libPapa.parse(_BookData,
                                             {
                                                 if (!pError)
                                                 {
-                                                    _Fable.log.info(`Joined author ${pAuthor} ID ${pRecord.IDAuthor} to book ${pBookDataRow.Title} ID ${pRecord.IDBook}`);
+                                                    _Fable.log.info(`Joined author ${pAuthor} ID ${pRecord.IDAuthor} to book ID ${pRecord.IDBook}`);
                                                 }
                                                 return fAuthorJoinInsertCallback(pError);
                                             });        
