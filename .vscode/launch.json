@@ -58,7 +58,7 @@
             }
         },
         {
-            "name": "Retold Dev Harness",
+            "name": "External Library Dev Harness",
             "type": "pwa-node",
             "request": "launch",
             "outputCapture": "std",
@@ -73,7 +73,7 @@
             }
         }
         {
-            "name": "Library Mocha Tests",
+            "name": "External Library Mocha Tests",
             "args": [
                 "-u",
                 "tdd",
