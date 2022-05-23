@@ -24,12 +24,30 @@ COPY ./api/model/sql_create/BookStore-CreateDatabase.mysql.sql /home/coder/MySQL
 RUN sudo service mariadb restart && sleep 5 && mysql -u root -p"123456789" -e "CREATE DATABASE bookstore;"
 RUN sudo service mariadb restart && sleep 5 && mysql -u root -p"123456789" bookstore < /home/coder/MySQL-Create-Databases.sql
 
+RUN echo "...installing vscode extensions..."
+RUN code-server --install-extension rangav.vscode-thunder-client \
+    code-server --install-extension hbenl.vscode-mocha-test-adapter \
+    code-server --install-extension hbenl.vscode-test-explorer \
+    code-server --install-extension hbenl.test-adapter-converter \
+    code-server --install-extension cweijan.vscode-mysql-client2 \
+    code-server --install-extension daylerees.rainglow \
+    code-server --install-extension oderwat.indent-rainbow \
+    code-server --install-extension evan-buss.font-switcher \
+    code-server --install-extension vscode-icons-team.vscode-icons \
+    code-server --install-extension bengreenier.vscode-node-readme \
+    code-server --install-extension bierner.color-info \
+    code-server --install-extension dbaeumer.vscode-eslint \
+    code-server --install-extension PKief.material-icon-theme
+
 SHELL ["/bin/bash", "-c"]
 USER coder
 
 # Copy any default configs for the coding environment we want (e.g. dark theme)
 # This broke the debug runners
-# COPY ./.config/.default_home/ /home/coder/
+# Turns out this is because vscode is using localstorage for this file, and resets it on new instances.
+# We may be able to jimmy a startup script later that overrides this behavior.
+# I like the freshcut contrast theme!
+# COPY ./.vscode/settings.json /home/coder/.local/share/code-server/User/settings.json
 
 RUN echo "...mapping development environment volumes..."
 # Volume mappings for RETOLD:Bookstore example and subsequent libraries
